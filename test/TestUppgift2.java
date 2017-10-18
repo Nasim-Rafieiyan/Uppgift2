@@ -1,5 +1,6 @@
 
 import java.text.ParseException;
+import java.time.LocalDate;
 import junit.framework.TestCase;
 import org.junit.Test;
 import uppgift2.DaysBetweenTwoDates;
@@ -14,11 +15,10 @@ public class TestUppgift2 {
     //Första enhetstest
     @Test
     public final void TestDaysBetweenTwoDates() throws ParseException {
-
-        //(Today:2017-10-17) - (Input:2017-10-10) = 7
-        //If you want to run the test right, you shoud change "7"
-        TestCase.assertTrue(gd.daysBetweenTwoDates("2017-10-10") == 7);
-        TestCase.assertFalse(gd.daysBetweenTwoDates("2017-10-10") == 2);
+ 
+        LocalDate ld = LocalDate.of(2017,10,11);
+        TestCase.assertTrue(gd.daysBetweenTwoDates("2017-10-10",ld) == 1);
+        TestCase.assertFalse(gd.daysBetweenTwoDates("2017-10-10", ld) == 2);
     }
 
     //Andra enhetstest

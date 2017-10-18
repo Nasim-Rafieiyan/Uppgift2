@@ -47,7 +47,7 @@ public class InputOutput {
                     //s = "EN kund!";
                     String input = secondLine.trim();
                     DaysBetweenTwoDates dbtd = new DaysBetweenTwoDates();
-                    long days = dbtd.daysBetweenTwoDates(input);
+                    long days = dbtd.daysBetweenTwoDates(input, LocalDate.now());
                     System.out.printf("Personen har köpt årskortet %d dagar sedan.\n", days);
 
                     //Har personen ett giltigt årskort eller inte?

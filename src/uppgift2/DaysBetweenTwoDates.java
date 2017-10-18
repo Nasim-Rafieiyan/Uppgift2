@@ -9,12 +9,12 @@ import java.time.temporal.ChronoUnit;
 public class DaysBetweenTwoDates {
     
     
-public long daysBetweenTwoDates(String input) throws ParseException{
+public long daysBetweenTwoDates(String input, LocalDate comparedate) throws ParseException{
         
         //*****Läsa in och parsa datum*****
         //input format is "yyyy-MM-dd"
         LocalDate startDate = LocalDate.parse(input);
-        LocalDate endtDate = LocalDate.now();
+        LocalDate endtDate = comparedate;
         Long ddays = ChronoUnit.DAYS.between(startDate, endtDate);
 
         return ddays;       
